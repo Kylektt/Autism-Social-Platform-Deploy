@@ -9,7 +9,7 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "test": "jest",
-    "start": "serve -s dist"
+    "start": "npx serve -s dist"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
