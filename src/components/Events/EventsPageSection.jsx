@@ -8,12 +8,13 @@ import getEventDetail from "../../api/getEventDetail";
 const EventsPageSection = () => {
   const [organisationId, setOrganisationId] = useState(null);
   const [events, setEvents] = useState(null);
+  const eventbriteApiKey = import.meta.env.VITE_EVENTBRITE_PRIVATE_KEY;
 
   // 异步函数获取组织 ID
   useEffect(() => {
     const fetchOrganisationId = async () => {
       try {
-        const id = await getOrganisationId("36E55PWIMNCZFEZWHE4I");
+        const id = await getOrganisationId(eventbriteApiKey);
         setOrganisationId(id); // 将解析后的组织 ID 存储起来
       } catch (error) {
         console.error("Error fetching organisation ID:", error);
@@ -38,7 +39,7 @@ const EventsPageSection = () => {
         }
       };
 
-      fetchEventDetail(organisationId, "36E55PWIMNCZFEZWHE4I");
+      fetchEventDetail(organisationId, eventbriteApiKey);
     }
   }, [organisationId]);
 

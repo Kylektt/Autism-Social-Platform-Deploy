@@ -7,14 +7,14 @@ import getEventAddress from "../../api/getEventAddress";
 
 function EventCard(event) {
   const [eventAddress, setEventAddress] = useState(null);
-
+  const eventbriteApiKey = import.meta.env.VITE_EVENTBRITE_PRIVATE_KEY;
   useEffect(() => {
     const fetchEventAddress = async () => {
       try {
         if (event.event.online_event) return;
         const eventAddress = await getEventAddress(
           event.event.venue_id,
-          "36E55PWIMNCZFEZWHE4I",
+          eventbriteApiKey,
         );
         setEventAddress(eventAddress); // 将解析后的组织 ID 存储起来
       } catch (error) {
@@ -30,6 +30,7 @@ function EventCard(event) {
     console.log("eventAddress:", eventAddress.address.address_1);
   }
 
+  // console.log("eventbriteApiKey:", eventbriteApiKey)
   return (
     <div className="flex w-auto h-44 bg-slate-300 rounded-xl shadow-xl mt-5 mb-10 hover:bg-slate-400 hover:-translate-x-2 hover:-translate-y-2 cursor-pointer transition duration-300">
       <div className="flex-shrink-0 w-1/3  h-full p-5">
