@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { request } from "graphql-request";
 import BlogContent from "../components/Blog/BlogContent";
 import NavBar from "../components/NavBar";
-import HomePageFooter from "../components/Home/HomePageFooter";
+import WhiteFooter from "../components/WhiteFooter";
 
 const BlogDetails = () => {
   const [post, setPost] = useState(null);
@@ -14,7 +14,7 @@ const BlogDetails = () => {
     <>
       <NavBar />
       <BlogContent />
-      <HomePageFooter />
+      <WhiteFooter />
     </>
   );
 };
