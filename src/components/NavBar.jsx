@@ -51,8 +51,8 @@ function NavBar() {
               <Link to="/signin" className="navbar-signin">
                 SIGN IN
               </Link>
-              <Link to="/SignUp" className="navbar-create">
-                CREATE
+              <Link to="/SignUp" >
+                <button className="navbar-create">CREATE</button>
               </Link>
             </div>
           </div>

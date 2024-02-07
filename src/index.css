@@ -4,6 +4,7 @@
 
 html {
   min-height: 100vh;
+  min-width: 100vw;
 }
 
 body {
@@ -23,7 +24,7 @@ p {
 }
 
 .navbar-container {
-  max-width: 1740px;
+  
   margin: 0 auto;
   padding: 10px 20px;
   display: flex;
@@ -97,13 +98,22 @@ p {
   background-color: #0056b3;
 }
 
-/* Responsive design for smaller screens */
-@media (max-width: 768px) {
-  .navbar-menu {
-    display: none; /* Hide the menu on small screens */
-  }
 
-  /* Add a menu icon and other responsive features as needed */
+
+/* Responsive design for smaller screens */
+@media (max-width: 968px) {
+  .navbar-logo {
+    margin-left: 0; /* 将 logo 移动到左侧 */
+  }
+  .navbar-sign 
+  {
+    flex-direction: column; /* 将导航项堆叠起来 */
+    align-items: stretch;
+  }
+  .navbar-menu {
+    flex-direction: column; /* 将导航项堆叠起来 */
+    align-items: stretch; /* 让导航项填充整个容器宽度 */
+  }
 }
 
 /* hero-section */
