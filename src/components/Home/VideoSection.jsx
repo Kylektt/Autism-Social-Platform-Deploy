@@ -6,24 +6,30 @@ function VideoSection() {
           <iframe
             width="560"
             height="315"
-            src="https://www.youtube.com/embed/JYPeOm5A8XQ?si=-dhOYGIrUY5-LVA7"
+            src="https://www.youtube.com/embed/74xku17PEK8?si=QFwpKGZwX8tuVnnI"
             title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay;clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
           ></iframe>
         </div>
         <div className="video-info">
           <h2 className="video-heading">
-            Helping Parents and Therapists Cope with Autism Spectrum Disorder
+            The best therapist for your neurodiverse child
           </h2>
 
           <p className="video-description">
-            Dr. Susan P. Sherkow is a practicing child, adolescent, and adult
-            psychiatrist trained at Tufts University School of Medicine, Albert
-            Einstein College of Medicine, and the New York Psychoanalytic
-            Institute. She is currently the Director of The Sherkow Center for
-            Child Development and Autism Spectrum Disorder.
+            Embark on a holistic and neurodiverse affirming journey with Green
+            Pearls, guided by principles rooted in the latest research (Trembath
+            et al., 2022). Our approach centers around the child and family,
+            emphasizing individual strengths, holistic well-being, and an
+            ethical, culturally sensitive foundation. At Green Pearls, we
+            prioritize safety, evidence-based practices, and constant learning
+            from qualified practitioners. Our commitment extends to affirming
+            parents and families, offering coordinated, timely, and accessible
+            support. Join us in creating a future where every neurodiverse child
+            thrives, fostering understanding, acceptance, and empowerment for
+            all.
           </p>
 
           <a href="#" className="video-transcription">
