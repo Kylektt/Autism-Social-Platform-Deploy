@@ -16,7 +16,7 @@ export default function Newsletter() {
     };
 
     try {
-      const response = await fetch("/api", {
+      const response = await fetch("https://script.google.com/macros/s/AKfycbyytb_1noOIHG4io909YoYirZSE1HtILvhYgcWkUruL1UNTMSDWNjEom0tW9TBwZNynfg/exec", {
         method: "POST",
         body: JSON.stringify(formData),
         headers: {
