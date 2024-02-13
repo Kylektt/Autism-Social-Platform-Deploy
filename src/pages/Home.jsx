@@ -3,6 +3,7 @@ import NavBar from "../components/NavBar";
 import InfoBlockSection from "../components/Home/InfoBlockSection";
 import VideoSection from "../components/Home/VideoSection";
 import WhiteFooter from "../components/WhiteFooter";
+import Newsletter from "../components/Newsletter";
 function Home() {
   return (
     <>
@@ -10,6 +11,7 @@ function Home() {
       <HeroSection />
       <InfoBlockSection />
       <VideoSection />
+      <Newsletter />
       <WhiteFooter />
     </>
   );
