@@ -1,7 +1,41 @@
 import InteractiveBalls from "./InteractiveBalls";
-
+import React, { useState } from "react";
 
 export default function Newsletter() {
+  const [email, setEmail] = useState("");
+
+  const handleEmailChange = (event) => {
+    setEmail(event.target.value);
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    const formData = {
+      email: email,
+    };
+
+    try {
+      const response = await fetch("/api", {
+        method: "POST",
+        body: JSON.stringify(formData),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      if (response.ok) {
+        alert("Thanks for subscribing!");
+        console.log("Success:", response);
+        setEmail("");
+      } else {
+        console.error("Submission failed");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  };
+
   return (
     <div className="relative isolate overflow-hidden bg-white px-6 py-24 shadow-lg xl:py-32 w-full">
       <InteractiveBalls />
@@ -12,7 +46,10 @@ export default function Newsletter() {
         Join our community to receive the latest information, resources, and
         support for individuals with autism and their families.
       </p>
-      <form className="mx-auto mt-10 flex max-w-md gap-x-4">
+      <form
+        className="mx-auto mt-10 flex max-w-md gap-x-4"
+        onSubmit={handleSubmit}
+      >
         <label htmlFor="email-address" className="sr-only">
           Email address
         </label>
@@ -22,6 +59,8 @@ export default function Newsletter() {
           type="email"
           autoComplete="email"
           required
+          value={email}
+          onChange={handleEmailChange}
           className="min-w-0 flex-auto border-0 bg-gray-100 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-200 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
           placeholder="Enter your email"
         />
