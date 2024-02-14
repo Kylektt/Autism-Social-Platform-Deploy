@@ -11,18 +11,21 @@ export default function Newsletter() {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    const formData = {
-      email: email,
-    };
+
+
+
+    const scriptUrl = "https://script.google.com/macros/s/AKfycbxYhNJYSqbS1cf7iLF6da49-35D-DYwzTFRUq43KG-bn__V4YGklpJGLpZC6v-n19sp9Q/exec"; 
+    const urlWithParams = `${scriptUrl}?email=${encodeURIComponent(email)}`;
+
 
     try {
-      const response = await fetch("https://script.google.com/macros/s/AKfycbyytb_1noOIHG4io909YoYirZSE1HtILvhYgcWkUruL1UNTMSDWNjEom0tW9TBwZNynfg/exec", {
-        method: "POST",
-        body: JSON.stringify(formData),
-        headers: {
-          "Content-Type": "application/json",
+      const response = await fetch(
+        urlWithParams,
+        {
+          method: "GET",
+          mode: 'cors',
         },
-      });
+      );
 
       if (response.ok) {
         alert("Thanks for subscribing!");
