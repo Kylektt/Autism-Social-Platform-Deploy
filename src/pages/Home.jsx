@@ -4,6 +4,7 @@ import InfoBlockSection from "../components/Home/InfoBlockSection";
 import VideoSection from "../components/Home/VideoSection";
 import WhiteFooter from "../components/WhiteFooter";
 import Newsletter from "../components/Newsletter";
+import QuotesComponent from "../components/QuotesComponent";
 function Home() {
   return (
     <>
@@ -11,6 +12,7 @@ function Home() {
       <HeroSection />
       <InfoBlockSection />
       <VideoSection />
+      <QuotesComponent />
       <Newsletter />
       <WhiteFooter />
     </>
