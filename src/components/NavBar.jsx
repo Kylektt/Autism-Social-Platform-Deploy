@@ -17,19 +17,19 @@ function NavBar() {
 
             <ul className="navbar-menu">
               <li className="navbar-item mx-6">
-                <a href="./index.html" className="navbar-link">
+                <Link to="/" className="navbar-link">
                   HOME
-                </a>
+                </Link>
               </li>
               <li className="navbar-item mx-6">
-                <a href="#" className="navbar-link">
+                <Link to="/what-is-autism" className="navbar-link">
                   What is Autism
-                </a>
+                </Link>
               </li>
               <li className="navbar-item mx-6">
-                <a href="./support.html" className="navbar-link">
+                <Link to="/support" className="navbar-link">
                   SUPPORT
-                </a>
+                </Link>
               </li>
               <li className="navbar-item mx-6">
                 <Link to="/events" className="navbar-link">
@@ -37,9 +37,9 @@ function NavBar() {
                 </Link>
               </li>
               <li className="navbar-item mx-6">
-                <a href="./services.html" className="navbar-link">
+                <Link to="/services" className="navbar-link">
                   SERVICE
-                </a>
+                </Link>
               </li>
               <li className="navbar-item mx-6">
                 <Link to="/blog/1" className="navbar-link">
@@ -51,7 +51,7 @@ function NavBar() {
               <Link to="/signin" className="navbar-signin">
                 SIGN IN
               </Link>
-              <Link to="/SignUp" >
+              <Link to="/SignUp">
                 <button className="navbar-create">CREATE</button>
               </Link>
             </div>
