@@ -8,6 +8,8 @@ import Blog from "./pages/Blog.jsx";
 import CreateBlog from "./pages/CreateBlog.jsx";
 import BlogDetails from "./pages/BlogDetails.jsx";
 import Events from "./pages/Events.jsx";
+import WhatIsAutism from "./components/WhatIsAutism/WhatIsAutismPage.jsx"; 
+
 
 function App() {
   return (
@@ -26,6 +28,9 @@ function App() {
           <Route path="/blogdetail/:slug" element={<BlogDetails />} />
 
           <Route path="/events" element={<Events />} />
+          
+          <Route path="/what-is-autism" element={<WhatIsAutism />} />
+
         </Routes>
       </BrowserRouter>
     </>
