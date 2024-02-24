@@ -1,7 +1,7 @@
 import React from "react";
 import NavBar from "../components/NavBar/NavBar";
 import Article from "../articles/Article";
-import "./whatIsAutism.css";
+import "./WhatIsAutism.css";
 
 
 const WhatIsAutism = () => {
