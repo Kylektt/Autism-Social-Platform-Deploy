@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import { request } from "graphql-request";
 import EventCard from "./EventCard";
 import getOrganisationId from "../../api/getOrganisationId";
 import getEventDetail from "../../api/getEventDetail";

@@ -1,7 +1,8 @@
 import React from "react";
-import NavBar from "../components/NavBar";
 import EventsPageSection from "../components/Events/EventsPageSection";
 import WhiteFooter from "../components/WhiteFooter";
+import NavBar from "../components/NavBar"; 
+
 
 function Events() {
   return (

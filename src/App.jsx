@@ -1,4 +1,4 @@
-// Desc: This is the main entry point for the application
+import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import SignIn from "./pages/SignIn.jsx";
 import Home from "./pages/Home.jsx";
@@ -8,6 +8,7 @@ import Blog from "./pages/Blog.jsx";
 import CreateBlog from "./pages/CreateBlog.jsx";
 import BlogDetails from "./pages/BlogDetails.jsx";
 import Events from "./pages/Events.jsx";
+import WhatIsAutism from "./pages/WhatIsAutism";
 
 function App() {
   return (
@@ -26,6 +27,11 @@ function App() {
           <Route path="/blogdetail/:slug" element={<BlogDetails />} />
 
           <Route path="/events" element={<Events />} />
+
+          {/* Updated route for WhatIsAutism */}
+          <Route path="/what-is-autism" element={<WhatIsAutism />} />
+
+          {/* Add other routes for articles if needed */}
         </Routes>
       </BrowserRouter>
     </>
